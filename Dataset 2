@@ -1,0 +1,27 @@
+# Dataset 2
+# Regresi
+
+# install
+pip install gdown
+import gdown
+
+gdown.download("https://drive.google.com/uc?id=1f8eaAZY-7YgFxLcrL3OkvSRa3onNNLb9")
+
+# import library untuk menampilkan hasil data
+import pandas as pd
+
+file_path = '/content/midterm-regresi-dataset.csv'
+df = pd.read_csv(file_path)
+
+df.head()
+
+# data frame
+print("df.shape:", df.shape) #ada 515344 row/baris dan 90 feature
+
+# memeriksa ukuran file
+import os
+file_size_bytes = os.path.getsize(file_path)
+file_size_mb = file_size_bytes / (1024 ** 2)
+
+print(f"Ukuran file: {file_size_bytes:,} bytes")
+print(f"Ukuran file: {file_size_mb:.2f} MB")  #ukuran 422.88 MB, deadline 2 minggu. ngerjain mepet pasti ga kelar :))))
